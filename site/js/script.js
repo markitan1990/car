@@ -35,8 +35,8 @@ $(window).scroll(function () {
   $('.roud').css({
     'top': -($(this).scrollTop() / 5) + "px",
   });
- 
-  if ($(this).scrollTop() > window.innerWidth/2+100) {
+
+  if ($(this).scrollTop() > window.innerWidth / 2 + 100) {
     $('.bmw').css({
       'opacity': "0"
     });
@@ -51,37 +51,45 @@ $(window).scroll(function () {
       'opacity': "0"
     });
   }
-  if ($(this).scrollTop() > window.innerWidth/2+250) {
+  if ($(this).scrollTop() > window.innerWidth / 2 + 250) {
     $('.car-box-text div:last-child').css({
       'margin-left': "90px",
       'transition': "0.4s",
-    }); 
+    });
     $('.car-box-text div:first-child').css({
       'margin-right': "100px",
       'transition': "0.4s",
-    }); 
-  }else{
+    });
+  } else {
     $('.car-box-text div:last-child').css({
       'margin-left': "5px",
       'transition': "0.4s",
-    }); 
+    });
     $('.car-box-text div:first-child').css({
       'margin-right': "5px",
       'transition': "0.4s",
-    }); 
+    });
   }
-  if($(this).scrollTop() > window.innerWidth/2+550){
+  if ($(this).scrollTop() > window.innerWidth / 2 + 550) {
     $('.car-box-text div:last-child').css({
       'margin-left': "5px",
       'transition': "0.4s",
-    }); 
+    });
     $('.car-box-text div:first-child').css({
       'margin-right': "5px",
       'transition': "0.4s",
-    }); 
-  } 
-  if ($(this).scrollTop() > 100) {
-    
+    });
   }
 });
+$(document).ready(function () {
+  $('.glow-on-hover').on('click', function () {
+    $('.modal, .login-box, .modal-img').toggleClass('active');
+  });
+  
+  $('.modal').on('click', function () {
+    $('.modal, .login-box, .modal-img').toggleClass('active');
+  });
+})
+
+
 var header = $(".classinitial"); 

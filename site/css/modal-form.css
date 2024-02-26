@@ -1,14 +1,17 @@
 .login-box {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 40%;
     left: 50%;
+    margin-left: 40px;
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, .5);
+    background: rgb(0 0 0);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    box-shadow: 0 15px 25px rgb(0 0 0 / 62%);
     border-radius: 10px;
+    opacity: 0;
+    margin-bottom: 20px;
 }
 
 .login-box h2 {
@@ -172,15 +175,40 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
     z-index: 101;
+    background-color: #9c929200;
+    transition: 0.3s;
     display: flex;
-    display: none;
+    pointer-events: none;
 }
 
-.cube {
-    width: 50px; 
-    height: 50px;
-    background: black; 
-    margin: 1px;
+.modal.active {
+    pointer-events: all;
+    transition: 0.3s;
+    background-color: #ffffff61;
+}
+
+.login-box.active {
+    transition: 0.3s;
+    transition-delay: 0.4s;
+    opacity: 1;
+    top: 50%;
+    z-index: 102;
+    margin-bottom: 0px;
+}
+
+.modal-img {
+    transition: 0.4s;
+    pointer-events: none;
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+
+.modal-img.active {
+    top: 0;
+    transition: 0.4s;
+    transition-delay: 0.3s;
 }
