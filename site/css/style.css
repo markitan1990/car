@@ -253,3 +253,7 @@ section {
 .content2 .car-img-card img {
     width: 100%;
 }
+.calc-result{
+    font-size: 30px;
+    background: red;
+}
