@@ -235,16 +235,104 @@
         </div>
       </div>
     </div>
-<div class="calculate">
-  <form action="" class="form-calc">
-    <input class="year" name="year" type="number">
-    <input class="cost" name="cost"  type="number">
-    <input class="energy" name="energy"   type="radio" checked>
-    <input class="energy-electro" name="energy"  type="radio">
-    <input class="volume-cube" name="volume-cube"  type="number">
-    <div class="calc-button">РАссчитать</div>
-  </form> 
-</div>
+    <div class="calculate">
+      <div class="calc-form">
+        <div id="calc-from-europe-b" class="uk-width-2">
+          <div class="uk-card">
+            <h2 class="uk-text-center">Калькулятор на 2024&nbsp;год</h2>
+            <form class="uk-form-stacked" >
+              <div>
+                <div class="uk-margin">
+                  <label class="uk-form-label uk-margin-remove-bottom" for="calc_adge">Возраст авто</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select">
+                      <option value="0">менее 3-х лет</option>
+                      <option value="1" selected>от 3-х до 5 лет</option>
+                      <option value="2">более 5 лет</option>
+                      <option value="3">более 7 лет</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-2">
+                <div class="uk-margin">
+                  <label class="uk-form-label uk-margin-remove-bottom" for="calc_price">Стоимость авто</label>
+                  <div class="uk-form-controls">
+                    <input placeholder="в евро" class="uk-input uk-form-small" type="number" min="1" id="calc_price"
+                      required="" oninput="changeval()" wfd-id="id6">
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-2 uk-margin-small-top uk-grid-margin uk-first-column">
+                <div class="uk-margin">
+                  <div class="uk-form-label">Тип двигателя</div>
+                  <div class="uk-form-controls">
+                    <label><input class="uk-radio" type="radio" name="engine" id="calc_fuel" value="0" checked=""> Топливо</label>
+                    <label><input class="uk-radio" type="radio" name="engine" id="calc_electro" value="1">Электро</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-2 uk-margin-small-top uk-grid-margin">
+                <div class="uk-margin">
+                  <div class="uk-form-label uk-margin-remove-bottom">Авто растамаживает</div>
+                  <div class="uk-form-controls">
+                    <label><input class="uk-radio" type="radio" name="face" id="calc_person" value="0" checked=""
+                        wfd-id="id9"> Физ.лицо</label><br>
+                    <label><input class="uk-radio" type="radio" name="face" id="calc_entity" value="1" wfd-id="id10">
+                      Юр.лицо</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-2 uk-margin-small-top uk-grid-margin uk-first-column" id="calc_volume_visible"
+                style="display: block;">
+                <div class="uk-margin">
+                  <label class="uk-form-label uk-margin-remove-bottom" for="calc_volume">Объем, см<sup>3</sup></label>
+                  <div class="uk-form-controls">
+                    <input class="uk-input uk-form-small" type="number" min="1" id="calc_volume"
+                      placeholder="напр. 2000" oninput="changeval()" wfd-id="id11">
+                  </div>
+                </div>
+              </div>
+
+              <div id="calc_fuel_visible" class="uk-width-1-2 uk-margin-small-top" style="display: none;">
+                <div class="uk-margin">
+                  <div class="uk-form-label uk-margin-remove-bottom">Вид топлива</div>
+                  <div class="uk-form-controls">
+                    <label><input class="uk-radio" type="radio" name="fuel" id="calc_petrol" value="0" checked=""
+                        wfd-id="id12"> Бензин</label><br>
+                    <label><input class="uk-radio" type="radio" name="fuel" id="calc_diesel" value="1" wfd-id="id13">
+                      Дизель</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-1 uk-margin-small-top uk-grid-margin uk-first-column" id="calc_discount_visible"
+                style="display: block;">
+                <div class="uk-margin uk-text-center">
+                  <div class="uk-form-controls">
+                    <label><input id="calc_discount" class="uk-checkbox" type="checkbox" checked="" wfd-id="id14">
+                      Таможенная льгота 50% (Указ №140)</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-1 uk-margin-small-top uk-grid-margin uk-first-column">
+                <div class="uk-text-center"><a href="#scroll_calc_rezult" uk-scroll=""><input id="calc_btn"
+                      title="Рассчитать таможенную пошлину на авто" class="uk-button uk-button-primary"
+                      value="Рассчитать" type="button" wfd-id="id15"></a></div>
+              </div>
+
+            </form>
+          </div>
+          <div class="uk-hidden@m"><span id="scroll_calc_rezult"></span></div>
+        </div>
+      </div>
+      <div class="calc-info"></div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
       integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
